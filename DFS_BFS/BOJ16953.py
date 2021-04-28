@@ -1,5 +1,6 @@
-# 이렇게 풀면 시간초과 뜨네
+# A → B
 # 문제 링크 : https://www.acmicpc.net/problem/16953
+# 이렇게 풀면 시간초과 뜨네
 # from collections import deque
 #
 # a, b = map(int, input().split())
@@ -40,7 +41,7 @@ while queue:
     if i == b:
         answer = cnt
         break
-    if i * 2 <= b:d
+    if i * 2 <= b:
         queue.append((i*2, cnt+1))
     if int(str(i) + '1') <= b:
         queue.append((int(str(i) + '1'), cnt+1))

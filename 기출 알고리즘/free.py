@@ -2,6 +2,7 @@ sentence = 'i love coding'
 keyword = 'mask'
 skips = [0, 0, 3, 2, 3, 4]
 
+
 def solution(sentence, keyword, skips):
     sentence_reverse = list(sentence)[::-1]
     answer = []
@@ -21,5 +22,6 @@ def solution(sentence, keyword, skips):
 
     answer += sentence_reverse[::-1]
     return ''.join(answer)
+
 
 print(solution(sentence, keyword, skips))

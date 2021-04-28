@@ -4,7 +4,7 @@ import time
 
 start_time = int(round(time.time() * 1000))
 ########################
-arr = [i for i in range(1,5)]
+arr = [i for i in range(1,6)]
 ##################
 # 실행 시간 : 906ms
 # itertools.combinations
@@ -25,7 +25,7 @@ def comb(lst, n):
                 ret.append([lst[i]] + temp)
 
     return ret
-print(comb(arr, 2))
+print(comb(arr, 3))
 ##################
 # 실행 시간 : 2464ms
 # def comb(arr, n):
@@ -46,15 +46,15 @@ def combination(array, r):
         return chosen
     if r == 1:
         for i in array:
-            chosen.append(i)
+            chosen.append([i])
     elif r > 1:
         # r 개 만큼 빼주는 이유 (순서가 고려사항이 아니기 때문에, r개는 고려하지 않아도 앞서서 정해진다)
         for i in range(len(array) - r + 1):
             for temp in combination(array[i + 1:], r - 1):
-                chosen.append([array[i], temp])
+                chosen.append([array[i]] + temp)
     return chosen
 
-print(combination("ABCD", 2))
+print(combination([1,2,3,4,5], 3))
 ##################
 end_time = int(round(time.time() * 1000))
 print('실행 시간 : %d(ms)' % (end_time - start_time))
