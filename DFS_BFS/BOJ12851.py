@@ -26,6 +26,6 @@ def bfs(n):
                 elif ch[i][0] == ch[x][0] + 1: # 한번 이상 방문한 경우
                     ch[i][1] += ch[x][1]
 
-a, b = bfs(n)
-print(a)
-print(b)
+bfs(n)
+print(ch[k][0])
+print(ch[k][1])
