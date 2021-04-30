@@ -74,7 +74,8 @@ def set_pair(now, count):
     return count if now == target else -1
 
 res1 = set_pair(now[:], 0)
-res2 = set_pair(now[:], 1)
+res2 = set_pair(now[:], 1) # 첫번째 전구 누르는 경우
+
 
 if res1 >= 0 and  res2 >= 0:
     print(min(res1, res2))
