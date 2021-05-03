@@ -1,3 +1,5 @@
+# 로또
+# 문제 링크 : https://www.acmicpc.net/problem/6603
 # def dfs(start, depth):
 #     if depth == 6:
 #         for i in range(6):
